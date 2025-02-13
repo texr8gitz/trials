@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montana😍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e0e0;
+            color: #8b0000;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .heart {
+            font-size: 5em;
+            color: #ff0000;
+        }
+        .button {
+            background-color: #ff4d4d;
+color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+            display: inline-block; /* Ensure buttons are aligned horizontally */
+        }
+        .button:hover {
+            background-color: #ff3333;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hi My Love</h2>
+    <p>You do know how lucky I am to have you in my life...</p>
+    <div class="heart">❤️</div>
+
+    <!-- Add your photo here -->
+    <img id="question-image" src="babby.jpeg" alt="Us together">
+
+    <p>I know you usually preffer professionalism <br> so I came up with this way to ask you...</p>
+    <h1>Will you please be my VALENTINE'S?</h1>
+
+    <!-- Buttons to answer -->
+    <button class="button" onclick="valentineAnswer('yes')">Yes Daddy!😍</button>
+    <button class="button" onclick="valentineAnswer('no')">HAIWEZI!</button>
+
+    <!-- Broken Heart Image (hidden initially) -->
+    <img id="broken-heart" src="you.jpeg" alt="Broken Heart" class="hidden"> 
+<img id="us-together" src="us.jpeg" alt="Us Together" class="hidden">
+
+    <script>
+        function valentineAnswer(answer) {
+            // Handle 'Yes' answer
+            if (answer === 'yes') {
+                document.getElementById("us-together").classList.remove("hidden");
+                alert('Yay! I am so happy you said YES 😍 ♥️ ( sorry I took long to ask but hope you appreciate the effort) ❤️');
+            } 
+            // Handle 'No' answer
+            else if (answer === 'no') {
+                document.getElementById("broken-heart").classList.remove("hidden");
+                const sureAnswer = confirm("Si ati adi ukona kitu ingine ya maana ya kufanya, no is NOT an answer!!!");
+                if (sureAnswer === false) {
+                    alert("NIMEKUPATA!!! YOU ALREADY ARE MY VALENTINE MY LOVE 😘❤️");
+                } else {
+                    alert("OYAA!HEBU ANZA AFRESH NA UFINYE YES 😂 ");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
